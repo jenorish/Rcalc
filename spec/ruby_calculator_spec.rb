@@ -17,4 +17,9 @@ RSpec.describe RubyCalculator do
       expect(RubyCalculator.add("//;,10,,1,2\n3;4,\n5")).to eq(25)
     end
   end
+  describe '.parse_numbers' do 
+    it 'returns 6 with given "//;,10,,1,2\n3;4,\n5" String' do
+      expect(RubyCalculator.parse_numbers("//;,10,,1,2\n3;4,\n5")).to eq([0, 0, 10, 0, 1, 2, 3, 4, 0, 5])
+    end
+ end
 end
