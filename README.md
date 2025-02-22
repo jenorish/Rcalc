@@ -1,2 +1,2 @@
 # Rcalc
-Ruby Caluculator simle and effective 
+Ruby Caluculator simple and effective 
