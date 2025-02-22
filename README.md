@@ -11,4 +11,9 @@ Ruby Caluculator simple and effective
 
     p RubyCalculator.add( "//;,10,,1,2\n3;4,\n5")
 
+# To Do 
+
+  ## Add Dynamic Delimiter
+  ## Set Dynamic Max value
+
 
