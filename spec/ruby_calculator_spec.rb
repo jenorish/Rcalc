@@ -13,9 +13,14 @@ RSpec.describe RubyCalculator do
       expect(RubyCalculator.add("1,2,3")).to eq(6)
     end
 
-    it 'returns 6 with given "//;,10,,1,2\n3;4,\n5" String' do
+    it 'returns 25 with given "//;,10,,1,2\n3;4,\n5" String' do
       expect(RubyCalculator.add("//;,10,,1,2\n3;4,\n5")).to eq(25)
     end
+
+    it 'Checked Random numbers "1,3,3,3,2,,3,5,2,5,5," String' do
+      expect(RubyCalculator.add("1,3,3,3,2,,3,5,2,5,5,")).to eq(32)
+    end
+
   end
   describe '.parse_numbers' do 
     it 'returns 6 with given "//;,10,,1,2\n3;4,\n5" String' do
@@ -23,3 +28,5 @@ RSpec.describe RubyCalculator do
     end
  end
 end
+
+

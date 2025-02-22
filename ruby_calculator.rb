@@ -13,4 +13,5 @@ class RubyCalculator
   end
 end
 
+p RubyCalculator.add( "1,3,3,3,2,,3,5,2,5,5,")
 
