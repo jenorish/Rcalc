@@ -1,5 +1,5 @@
 class RubyCalculator
-  DEFAULT_DELIMITERS = /;|\n/.freeze
+  DEFAULT_DELIMITERS = /;|\n|\*/.freeze
   def self.add(numbers)
     return 0 if numbers.empty?
     # Removing delimiter

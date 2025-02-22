@@ -35,7 +35,7 @@ RSpec.describe RubyCalculator do
     end
 
     it 'returns 6 with given "///[***]\n1***2***3" String' do
-      expect(RubyCalculator.add("///[***]\n1***2***3")).to eq(1)
+      expect(RubyCalculator.add("///[***]\n1***2***3")).to eq(6)
     end
   end
   describe '.parse_numbers' do 
