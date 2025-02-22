@@ -6,7 +6,7 @@ RSpec.describe RubyCalculator do
       expect(RubyCalculator.add("")).to eq(0)
     end
     it 'returns 6 for "1,2,3" String' do
-      expect(RubyCalculator.add("1,2,3")).to eq(6)
+      expect(RubyCalculator.add("1,2,3,5000")).to eq(6)
     end
 
     it 'returns 6 with given "1\n2,3" String' do
@@ -48,6 +48,10 @@ RSpec.describe RubyCalculator do
       expect { RubyCalculator.validate_negatives([1,-2,-3,4]) }.to raise_error("negative numbers not allowed -2,-3")
     end
   end
+  describe '.reject_max_value' do 
+     it 'returns [1,4] with given "1,20000,4" String' do
+      expect(RubyCalculator.reject_max_value([1,20000,4])).to match_array([1,4])
+    end
+  end
 end
-
 

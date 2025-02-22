@@ -1,10 +1,12 @@
 class RubyCalculator
   DEFAULT_DELIMITERS = /;|\n|\*|\%/.freeze # Add delimiters here
+  MAXNUM = 1000
   def self.add(numbers)
     return 0 if numbers.empty?
     # Removing delimiter
     nums = parse_numbers(numbers)
-    validate_negatives(nums)
+    validate_negatives(nums) 
+    nums = reject_max_value(nums)
     nums.sum
   end
 
@@ -18,5 +20,10 @@ class RubyCalculator
     negatives = nums.select(&:negative?)
     raise "negative numbers not allowed #{negatives.join(',')}" unless negatives.empty?
   end
+
+  def self.reject_max_value(nums)
+  	nums.select{|n| n < MAXNUM}
+  end
 end
+
 
