@@ -12,3 +12,5 @@ class RubyCalculator
    numbers.gsub(DEFAULT_DELIMITERS, ",").split(",").map(&:to_i)
   end
 end
+
+
