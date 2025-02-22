@@ -4,6 +4,7 @@ class RubyCalculator
     return 0 if numbers.empty?
     # Removing delimiter
     nums = parse_numbers(numbers)
+    validate_negatives(nums)
     nums.sum
   end
 
@@ -11,7 +12,11 @@ class RubyCalculator
   def self.parse_numbers(numbers)
    numbers.gsub(DEFAULT_DELIMITERS, ",").split(",").map(&:to_i)
   end
-end
 
-p RubyCalculator.add( "1,3,3,3,2,,3,5,2,5,5,")
+  # Checks for negative numbers and raises an error if found
+  def self.validate_negatives(nums)
+    negatives = nums.select(&:negative?)
+    raise "negative numbers not allowed #{negatives.join(',')}" unless negatives.empty?
+  end
+end
 
