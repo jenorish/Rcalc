@@ -5,5 +5,8 @@ RSpec.describe RubyCalculator do
     it 'returns 0 for an empty string' do
       expect(RubyCalculator.add("")).to eq(0)
     end
+    it 'returns 6 for "1,2,3"' do
+      expect(RubyCalculator.add("1,2,3")).to eq(6)
+    end
   end
 end
