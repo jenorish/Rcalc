@@ -1,5 +1,5 @@
 class RubyCalculator
-  DEFAULT_DELIMITERS = /;|\n|\*/.freeze
+  DEFAULT_DELIMITERS = /;|\n|\*|\%/.freeze # Add delimiters here
   def self.add(numbers)
     return 0 if numbers.empty?
     # Removing delimiter
@@ -19,3 +19,4 @@ class RubyCalculator
     raise "negative numbers not allowed #{negatives.join(',')}" unless negatives.empty?
   end
 end
+

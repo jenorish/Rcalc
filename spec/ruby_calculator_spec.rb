@@ -34,8 +34,8 @@ RSpec.describe RubyCalculator do
       expect { RubyCalculator.add("1,-2,-3,4") }.to raise_error("negative numbers not allowed -2,-3")
     end
 
-    it 'returns 6 with given "///[***]\n1***2***3" String' do
-      expect(RubyCalculator.add("///[***]\n1***2***3")).to eq(6)
+    it 'returns 6 with given "//[*][%]\n1*2%3" String' do
+      expect(RubyCalculator.add("//[*][%]\n1*2%3")).to eq(6)
     end
   end
   describe '.parse_numbers' do 
