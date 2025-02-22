@@ -21,6 +21,11 @@ RSpec.describe RubyCalculator do
       expect(RubyCalculator.add("1,3,3,3,2,,3,5,2,5,5,")).to eq(32)
     end
 
+    it 'Checked Random numbers with sum value "1,3,3,3,2,,3,5,2,5,5," String' do
+      numbers = [1,2,3,4]
+      expect(RubyCalculator.add("1,2;,3,\n,4;")).to eq(numbers.sum)
+    end
+
   end
   describe '.parse_numbers' do 
     it 'returns 6 with given "//;,10,,1,2\n3;4,\n5" String' do
